@@ -12,15 +12,11 @@ export class ButtonComponent implements OnInit {
   // input olarak vereceğim şeyleri böyle yazıyorum.
   @Input()
   text!: String;
-  @Input()
-  color!: String;
 
-  constructor(){
-
-  }
+  constructor(){  }
 
   ngOnInit(): void {
-      
+    
   }
 
 }
