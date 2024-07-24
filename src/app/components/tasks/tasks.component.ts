@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule, NgFor } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { Task } from '../../Task';
 import { TASKS } from '../../mock-tasks'; // iki üst folder a gitme yolu.
 
