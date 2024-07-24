@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { Task } from '../../Task';
-import { TASKS } from '../../mock-tasks';
+// import { TASKS } from '../../mock-tasks';
+import { TaskService } from '../../services/task.service';
 import { TaskItemComponent } from "../task-item/task-item.component"; // iki üst folder a gitme yolu.
 
 @Component({
@@ -13,9 +14,12 @@ import { TaskItemComponent } from "../task-item/task-item.component"; // iki üs
 })
 
 export class TasksComponent implements OnInit{
-  tasks: Task[] = TASKS;
-  constructor(){}
-  ngOnInit(): void{
+  tasks: Task[] = [];
+  constructor(private taskService: TaskService){
 
+  }
+  ngOnInit(): void{
+    // methodun döndüğü veri yapısını bu klass daki tasks e atayarak kullanmamı sağlıyorum.
+    this.taskService.getTasks().subscribe((tasks)=>(this.tasks = tasks))
   }
 }
