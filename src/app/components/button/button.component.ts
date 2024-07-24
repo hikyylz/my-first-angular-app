@@ -14,7 +14,6 @@ export class ButtonComponent implements OnInit {
   text!: String;
   @Input()
   color!: String;
-  
 
   constructor(){
 
