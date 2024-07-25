@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { Task } from '../../Task';
-// import { TASKS } from '../../mock-tasks';
 import { TaskService } from '../../services/task.service';
 import { TaskItemComponent } from "../task-item/task-item.component"; // iki üst folder a gitme yolu.
 
